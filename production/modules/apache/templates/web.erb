@@ -1,0 +1,10 @@
+<virtualhost *:<%= @webport %>>
+ServerName    <%= @webname %>
+documentRoot   /var/www/<%= @webdir %>
+</Virtualhost>
+
+
+<directory /var/www/<%= @webdir %>>
+AllowOverride None
+    Require all granted
+</directory>
