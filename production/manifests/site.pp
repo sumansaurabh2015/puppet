@@ -34,12 +34,19 @@ node "puppetagent.example.com"{
 include apache::install
 
 
-class {"apache::config":
+apache::vhost{"linux":
 	websitename => "linux.com",
 	webdir    => "linux",
 	webconfig   => "linux.conf",
 	webport => '80',
 	webname => "www.linux.conf",
+	}
+apache::vhost{"redhat":
+	websitename => "redhat.com",
+	webdir    => "redhat",
+	webconfig   => "redhat.conf",
+	webport => '80',
+	webname => "www.redhat.conf",
 	}
 
 include apache::service
