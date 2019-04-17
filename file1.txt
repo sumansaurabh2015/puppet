@@ -1,0 +1,116 @@
+INFO: 2019-03-26        05:48:20        72.14.179.40    -       127.0.0.1       7070    GET     /ui-service/version     -       200     -       0       1
+       http://localhost:7070   Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.157 Safari/537.36       https://ymp2.yesmail.com/
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGBUS (0x7) at pc=0x00002b24a46d5b78, pid=15756, tid=47436193950016
+#
+# JRE version: 6.0_35-b10
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (20.10-b01 mixed mode linux-amd64 compressed oops)
+# Problematic frame:
+# C  [libclntsh.so.11.1+0x6cdb78]  __int128+0x0
+#
+# An error report file with more information is saved as:
+# /home/dev/hs_err_pid15756.log
+#
+# If you would like to submit a bug report, please visit:
+#   http://java.sun.com/webapps/bugreport/crash.jsp
+#
+
+[error occurred during error reporting , id 0x7]
+
+
+[error occurred during error reporting , id 0x7]
+
+
+[error occurred during error reporting , id 0x7]
+
+
+[error occurred during error reporting , id 0x7]
+
+
+[error occurred during error reporting , id 0x7]
+
+
+[error occurred during error reporting , id 0x7]
+
+
+[error occurred during error reporting , id 0x7]
+
+
+[error occurred during error reporting , id 0x7]
+
+
+[error occurred during error reporting , id 0x7]
+
+
+[error occurred during error reporting , id 0x7]
+
+
+[error occurred during error reporting , id 0x7]
+
+
+[error occurred during error reporting , id 0x7]
+
+
+[error occurred during error reporting , id 0x7]
+
+
+
+=========
+32    http://localhost:7070   Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.83 Safari/537.36        https://ymp2.yesmail.com/
+2019-03-26 05:45:09,364-ERROR-Component.Server                        -[                                        ] | An exception occured writing the response entity
+ClientAbortException:  java.net.SocketException: Connection reset
+        at org.apache.catalina.connector.OutputBuffer.realWriteBytes(OutputBuffer.java:358)
+        at org.apache.tomcat.util.buf.ByteChunk.flushBuffer(ByteChunk.java:434)
+        at org.apache.tomcat.util.buf.ByteChunk.append(ByteChunk.java:293)
+        at org.apache.catalina.connector.OutputBuffer.writeByte(OutputBuffer.java:399)
+        at org.apache.catalina.connector.CoyoteOutputStream.write(CoyoteOutputStream.java:77)
+        at java.io.FilterOutputStream.write(FilterOutputStream.java:60)
+        at java.io.FilterOutputStream.write(FilterOutputStream.java:108)
+        at java.io.FilterOutputStream.write(FilterOutputStream.java:80)
+        at com.yesmail.magellan.jackson.JacksonRepresentation.write(JacksonRepresentation.java:193)
+        at org.restlet.engine.adapter.ServerCall.writeResponseBody(ServerCall.java:510)
+        at org.restlet.engine.adapter.ServerCall.sendResponse(ServerCall.java:454)
+        at org.restlet.ext.servlet.internal.ServletCall.sendResponse(ServletCall.java:426)
+        at org.restlet.engine.adapter.ServerAdapter.commit(ServerAdapter.java:196)
+        at org.restlet.engine.adapter.HttpServerHelper.handle(HttpServerHelper.java:153)
+        at org.restlet.ext.servlet.ServerServlet.service(ServerServlet.java:1089)
+        at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+        at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+        at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+        at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+        at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+        at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+        at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+        at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+        at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+        at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:852)
+        at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:588)
+        at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+        at java.lang.Thread.run(Thread.java:662)
+Caused by: java.net.SocketException: Connection reset
+        at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:96)
+        at java.net.SocketOutputStream.write(SocketOutputStream.java:136)
+        at org.apache.coyote.http11.InternalOutputBuffer.realWriteBytes(InternalOutputBuffer.java:741)
+        at org.apache.tomcat.util.buf.ByteChunk.flushBuffer(ByteChunk.java:434)
+        at org.apache.tomcat.util.buf.ByteChunk.append(ByteChunk.java:349)
+        at org.apache.coyote.http11.InternalOutputBuffer$OutputStreamOutputBuffer.doWrite(InternalOutputBuffer.java:765)
+        at org.apache.coyote.http11.filters.ChunkedOutputFilter.doWrite(ChunkedOutputFilter.java:126)
+        at org.apache.coyote.http11.InternalOutputBuffer.doWrite(InternalOutputBuffer.java:574)
+        at org.apache.coyote.Response.doWrite(Response.java:560)
+        at org.apache.catalina.connector.OutputBuffer.realWriteBytes(OutputBuffer.java:353)
+        ... 27 more
+2019-03-26 05:45:09,364-WARN -Component.Server                        -[                                        ] | Error while handling an HTTP server call:
+2019-03-26 05:45:09,364-INFO -Component.Server                        -[                                        ] | Error while handling an HTTP server call
+java.lang.IllegalStateException
+        at org.apache.catalina.connector.ResponseFacade.sendError(ResponseFacade.java:407)
+        at org.restlet.ext.servlet.internal.ServletCall.sendResponse(ServletCall.java:393)
+
+
+There were alert coming from mailgen & DIU also.
+
+
+eprov-illapi01:9080
+
+kal       3684  3677  1 Feb25 ?        08:11:34 java -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=. -javaagent:./target/newrelic.jar -Dspring.datasource.shared.url=jdbc:oracle:thin:@//192.168.124.17:3115/shaprod -Dspring.datasource.shared.username=ilapiserver -Dspring.datasource.shared.password=i1ap3r3ad -Dspring.datasource.shared.driver-class-name=oracle.jdbc.driver.OracleDriver -Dspring.datasource.shared.maxActive=20 -Dspring.datasource.shared.maxIdle=10 -Dspring.datasource.shared.minIdle=5 -Dspring.datasource.company.testOnBorrow=true -Dspring.datasource.company.validationQuery=SELECT 1 from dual -Dspring.data.elasticsearch.cluster-nodes=eprov-elasticm03.postdirect.com:9300,eprov-elasticm04.postdirect.com:9300 -Dspring.data.elasticsearch.cluster-name=YMPROD -Delastic.query.max.window.size=10000 -Delastic.query.max.expansion.size=1024 -Dlog.file.location=/var/log/IlluminaireBusiness -Dlogging.config=./conf/logback-spring.xml -Dkal.proxy.server.uri=http://eprop-illkal02.postdirect.com:9070 -Dspring.boot.admin.client.url=http://eprov-illadm02.postdirect.com:9060 -Dauth.token.values=239dj09jd3d2,239dj09jd3d3,239dj09jd3d6 -Dauth.userid.values=john.raymond@yesmail.com,robert.nobel@yesmail.com,etlserver@yesmail.com -Dauthorization.token.cache.expiry=john.raymond@yesmail.com,robert.nobel@yesmail.com,etlserver@yesmail.com -Dlog.file.location=/var/log/IlluminaireBusiness -Dorigin.header.values=https://360.yesmail.com -Daccess.control.allow.methods=POST,PATCH,PUT,GET,OPTIONS,DELETE -Daccess.control.max.age=3600 -Daccess.control.allow.headers=Origin,X-Requested-With,Content-Type,Accept,Authorization,X-Frame-Options -Dapi.v2.server.uri= -Dserver.port=9080 -Dmanagement.server.port=9081 -Dkal.server.locator.uri=http://kalservloc.postdirect.com -Dsso.uri=https://login-360.yesmail.com/auth/realms/yesmail -Daaa.uri=https://aaa-360.yesmail.com -Dapi.v2.reports.uri=http://reports.prod.yesmail.com -Dapi.v2.masters.uri=http://masters.prod.yesmail.com -Dapi.v2.push.services.uri=http://push-services.prod.yesmail.com -Dapi.v2.content.blocks.uri=http://content-blocks.prod.yesmail.com -Dapi.v2.target.list.uri=http://target-lists.prod.yesmail.com -Dapi.v2.company.uri=http://company.prod.yesmail.com -Dscheduler.interval.minutes=15 -Dcompany.connection.scanner.interval=0 0/5 * * * ? -Dapi.v2.emails.uri=http://emails.prod.yesmail.com -Dnotification.apiv2.user=yesmailmktg -Dnotification.template.id=1664930 -Dcom.sun.net.ssl.checkRevocation=false -Dhadron.base.url=https://360.yesmail.com -Dredis.server.uri=eprov-redis01.postdirect.com:6379 -Dcompany.structure.cache.expiry=43200 -Dpages.admin.uri=http://pages.yesmail.com/ -Dkal.server.health.check=true -jar ./target/IlluminaireBusiness.jar
